@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#1a1523" />
+  <title>Yasmin Haytham — Front-End Developer</title>
+  <meta name="description" content="Portfolio of Yasmin Haytham Eid, a front-end developer from Alexandria, Egypt, building clean, modern web experiences and growing into back-end development." />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="icon" href="icon-light-32x32.png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="icon-dark-32x32.png" media="(prefers-color-scheme: dark)" />
+  <link rel="apple-touch-icon" href="apple-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo"><span class="text-gradient" id="navName">Yasmin</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <!-- populated by JS -->
+      </ul>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </nav>
+
+    <div class="nav-mobile" id="navMobile" hidden>
+      <ul class="container" id="navMobileLinks">
+        <!-- populated by JS -->
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="hero-glow hero-glow--violet" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--cyan" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="reveal">
+          <p class="hero-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            <span id="heroLocation">Alexandria, Egypt</span>
+          </p>
+        </div>
+
+        <div class="reveal" style="transition-delay:80ms">
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient" id="heroName">Yasmin</span>.<br />I build for the web.
+          </h1>
+        </div>
+
+        <div class="reveal" style="transition-delay:160ms">
+          <p class="hero-tagline" id="heroTagline"></p>
+        </div>
+
+        <div class="reveal" style="transition-delay:240ms">
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-gradient">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:320ms">
+          <div class="hero-socials">
+            <a href="https://github.com/yasminhaytham" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/yasmin-haytham-b10738360" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.73v20.53C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.73C24 .78 23.2 0 22.22 0Z"/></svg>
+            </a>
+            <a href="mailto:yasmina.haytham@gmail.com" aria-label="Email" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" aria-label="Scroll to about section" class="hero-scroll">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bounce"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section container">
+      <div class="section-heading reveal">
+        <div class="section-heading-top">
+          <span class="section-index">01</span>
+          <span class="section-line bg-gradient-brand"></span>
+        </div>
+        <h2 class="section-title">About me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio" id="aboutBio">
+          <!-- populated by JS -->
+        </div>
+
+        <div class="about-cards">
+          <div class="reveal">
+            <div class="card">
+              <div class="card-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                <h3 class="card-title">Education</h3>
+              </div>
+              <ul class="education-list" id="educationList">
+                <!-- populated by JS -->
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal" style="transition-delay:100ms">
+            <div class="card">
+              <div class="card-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                <h3 class="card-title">Languages</h3>
+              </div>
+              <ul class="lang-list" id="langList">
+                <!-- populated by JS -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-heading-top">
+            <span class="section-index">02</span>
+            <span class="section-line bg-gradient-brand"></span>
+          </div>
+          <h2 class="section-title">Skills</h2>
+          <p class="section-subtitle">A front-end developer proficient in HTML, CSS, and JavaScript, building toward full-stack.</p>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- populated by JS -->
+        </div>
+
+        <div class="reveal" style="transition-delay:120ms">
+          <div class="backend-banner">
+            <div class="backend-banner-icon bg-gradient-brand">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            </div>
+            <div>
+              <h3 class="card-title">Focused on back-end growth</h3>
+              <p class="muted mt-1">I'm especially interested and invested in growing my back-end development skills — deepening my work with Node.js, Angular, MongoDB, and Python (Django) to build complete, end-to-end applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section container">
+      <div class="section-heading reveal">
+        <div class="section-heading-top">
+          <span class="section-index">03</span>
+          <span class="section-line bg-gradient-brand"></span>
+        </div>
+        <h2 class="section-title">Projects &amp; experience</h2>
+        <p class="section-subtitle">Selected projects, internships, and volunteer work.</p>
+      </div>
+
+      <div class="timeline">
+        <span class="timeline-line" aria-hidden="true"></span>
+        <ul class="timeline-list" id="timelineList">
+          <!-- populated by JS -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section section--alt section--top-border">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-heading-top">
+            <span class="section-index">04</span>
+            <span class="section-line bg-gradient-brand"></span>
+          </div>
+          <h2 class="section-title">Get in touch</h2>
+          <p class="section-subtitle">I'm open to internships, collaborations, and front-end opportunities. Let's build something together.</p>
+        </div>
+
+        <div class="contact-grid" id="contactGrid">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted small" id="footerText"></p>
+      <div class="footer-socials">
+        <a href="https://github.com/yasminhaytham" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/yasmin-haytham-b10738360" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.73v20.53C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.73C24 .78 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a href="mailto:yasmina.haytham@gmail.com" aria-label="Email" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
